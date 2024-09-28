@@ -14,6 +14,6 @@
  </p>
 
  <a href=Sprint-1\exercicios> Exercícios </a>  
- <a href=Sprint-1\certificados> Certificados </a>
+ <a href=Sprint-1\Certificados> Certificados </a>
 
 
