@@ -2,7 +2,7 @@
 
 <p>
 
- Nessa sprint aprendi sobre a metodologia Scrum e seu funcionamento na prática, além disso, aprendi os conceitos mais importantes do sistema Linux.
+ Nessa sprint aprendi sobre a metodologia Scrum e seu funcionamento na prática, além disso, aprendi os conceitos mais importantes do sistema Linux, redes de computadores e servidores Linux.
 
  Criar um repositório no GitHub vai facilitar e organizar muito mais qualquer projeto, seja ele feito só por uma pessoa ou por um time, é muito mais fácil ter acesso a novos arquivos enviados e fazer edições ao mesmo tempo que outra pessoa faz, por exemplo.
 
