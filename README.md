@@ -5,7 +5,7 @@
 # Sprints - índice
 
 
-###  <a href= Sprint-1 > Sprint 1 - Scrum Agile e Linux </a>
+###  <a href= Sprint-1 > Sprint 1 - Scrum Agile e Linux completo + servidores </a>
 
 <p>
 
