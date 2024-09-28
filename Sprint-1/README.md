@@ -6,23 +6,22 @@
 
   Antes de começar a trilha meu conhecimento de Linux era extremamente superficial, nessa primeira sprint aprendi sobre Kernel Linux, distribuições, conexões em modo bridge, NAT e interno, conectar remotamente por SSH, conceitos importantes sobre licenças copyleft x permisives e muito mais.
 
- Também aprendi sobre markdown, útil pra arquivos de textos pra organização dos repositórios
+ Também aprendi sobre comandos essenciais no terminal, para praticar utilizei as distros: Debian, Ubuntu, Mint e CentOS. Optei por utilizar uma que fosse baseada na redhat para não ficar preso somente ao Debian.
 
 
  </p>
 
- #### Comandos básicos do git que possam ser úteis
- - git init
- - git remote add main endereçorepositorio
- - git status > legal de colocar uma hr ou outra pra verificar se tem algum arquivo unstaged
- - git add . ou nomearquivo
- - git commit -a -m "mensagem"  (não esquecer de salvar o arquivo antes)
-- git push
-- git branch
-- git fetch
-- git pull enreçorepositorio branch
-- git gc (fazer o codigo ficar mais 'leve' depois de um tempo)
+ #### Comandos básicos do terminal que são úteis.
+- pwd -> para verificar o diretório atual
+- cd -> para mudar o diretório
+- cd .. -> para voltar ao diretório anterior
+- ls -> para mostrar todas as pastas expostas dentro de determinado diretório
+- ls -a -> para mostrare todas as pastas expostas e ocultas dentro de determinado diretório
+- sudo su -> se tornar root
+- apt install -> para instalar determinado software
+- apt remove --purge -> apt remove para remover determinado programa, -- purge para remover junto todas as configurações
+- mkdir pasta -> para criar uma pasta dentro de determinado local
 
---allow-unrelated-histories > caso aconteça o erro de "refusing to match unrelated histories"
+Esses são só alguns dos comandos e conceitos que aprendi ao longo da Sprint 1.
 
-Além disso, aprendi a utilizar virtual machine e alguns comandos para manipulação de arquivos no terminal do Ubuntu.
+Além disso, aprendi sobre protocolos TCP / IP, UDP, DHCP, Métodos Get / Post entre outros conhecimentos de redes...
