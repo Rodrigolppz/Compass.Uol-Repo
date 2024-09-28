@@ -9,7 +9,7 @@
 
 <p>
 
- nessa sprint, aprendi sobre os fundamentos de Scrum Agile e comandos do sistema Linux, usando o terminal.
+ Nessa sprint aprendi sobre os fundamentos de Scrum Agile e comandos do sistema Linux, usando o terminal.
 
  </p>
 
