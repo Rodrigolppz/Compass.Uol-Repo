@@ -9,7 +9,7 @@
 
 <p>
 
- nessa sprint, aprendi sobre como usar comandos úteis do Git pra versionamento de códigos, GitHub e comandos do sistema Linux, usando o terminal.
+ nessa sprint, aprendi sobre os fundamentos de Scrum Agile e comandos do sistema Linux, usando o terminal.
 
  </p>
 
