@@ -13,7 +13,7 @@
 
  </p>
 
- <a href=Sprint-1\Troubleshooting> Exercícios </a>  
+ <a href=Sprint-1\Troubleshooting.md> Exercícios </a>  
  <a href=Sprint-1\Certificados> Certificados </a>
 
 
