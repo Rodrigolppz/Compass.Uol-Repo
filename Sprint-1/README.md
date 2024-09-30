@@ -1,4 +1,4 @@
-## <img src="https://logospng.org/download/uol/logo-uol-icon-256.png" width="27"/>  Sprint 1 - Scrum Agile e Linux completo + servidores 
+##   Sprint 1 <img src="https://logospng.org/download/uol/logo-uol-icon-256.png" width="20"/> - Scrum Agile e Linux completo + servidores 
 
 <p>
 
