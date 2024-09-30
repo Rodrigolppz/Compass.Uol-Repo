@@ -25,7 +25,3 @@
 Esses são só alguns dos comandos e conceitos que aprendi ao longo da Sprint 1.
 
 Além disso, aprendi sobre protocolos TCP / IP, UDP, DHCP, Métodos Get / Post entre outros conhecimentos de redes...
-
-<b>Exemplo de problema que precisei resolver:</b>
-
-Estava querendo conectar na VM ubuntu por ssh, porém diversos erros estavam surgindo no caminho, foi nesse momento que entendi melhor sobre a importancia do apt upgrade, systemctl start ssh, systemctl status ssh, nano /etc/ssh/sshd_config e adicionar o comando " PermitRootLogin Yes ", com a ajuda do ChatGPT consegui resolver esse problema que foi essencial para o desenvolvimento da minha confiança e aprendizado!
