@@ -18,7 +18,7 @@
  
  #
 
-###  <a href= Sprint-2 > Sprint 2 - Projeto Linux Ubuntu - Nginx </a>
+###  <a href= Sprint-2 > Sprint 2 - Monitoramento do Nginx / Desafio 1  </a>
 Sprint dedicada ao primeiro projeto individual, detalhes abaixo:
 
  <a href=Sprint-1\Troubleshooting.md> Projeto </a>  
