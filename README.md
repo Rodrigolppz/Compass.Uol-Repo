@@ -15,7 +15,14 @@
 
  <a href=Sprint-1\Troubleshooting.md> Exercícios </a>  
  <a href=Sprint-1\Certificados> Certificados </a>
+ 
+ #
 
- ###  <a href= Sprint-2 > Sprint 2 - Projeto Linux Ubuntu - Nginx </a>
+###  <a href= Sprint-2 > Sprint 2 - Projeto Linux Ubuntu - Nginx </a>
+Sprint dedicada ao primeiro projeto individual, detalhes abaixo:
+
+ <a href=Sprint-1\Troubleshooting.md> Projeto </a>  
+ <a href=Sprint-1\Certificados> Certificados </a>
+
 
 
