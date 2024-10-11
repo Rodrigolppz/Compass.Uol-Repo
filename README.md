@@ -22,7 +22,7 @@
 Sprint dedicada ao primeiro projeto individual, detalhes abaixo:
 
  <a href=Sprint-1\Troubleshooting.md>Desafio</a>  
- <a href=Sprint-1\Certificados> Certificados </a>
+ <a href=Sprint-2\Codigo>Código</a>
 
 
 
