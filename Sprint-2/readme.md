@@ -20,10 +20,15 @@ Criar um diretório para armazenar os logs → mkdir /root/logs
 
 [Clique aqui para ser direcionado à pasta com o script](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-2/nginx.sh)
 
-6 - Realizar a segunda condição, criando um crontab para cronometrar a cada 5 minutos o envio da validação:
+6 - Criar um crontab para cronometrar a cada 5 minutos o envio da validação:
+
+O que é um crontab e pra que serve ? -> O crontab é uma ferramenta usada para agendar tarefas que devem ser executadas automaticamente em horários específicos no sistema Linux. É extremamente útil quando você deseja automatizar tarefas como a execução de scripts, backups, ou, como neste caso, validar o status de um serviço a cada intervalo de tempo.
 
 crontab -e 
 Adicionar o seguinte comando na última linha -> */5 * * * * /root/nginx.sh
 
-Cada asterístico representa uma unidade de medida, a primeira representa os minutos..
+Explicação:
 
+*/5 significa que o script será executado a cada 5 minutos.
+Os outros asteriscos * representam outras unidades de tempo (hora, dia do mês, mês, dia da semana). Como deixamos todos com asteriscos, o script será executado independentemente da hora, do dia ou do mês.
+Essa linha garante que o script /root/nginx.sh seja executado automaticamente a cada 5 minutos, sem a necessidade de intervenção manual.
