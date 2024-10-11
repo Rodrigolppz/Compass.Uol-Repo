@@ -48,7 +48,11 @@ Essa linha garante que o script /root/nginx.sh seja executado automaticamente a 
 
 ### Conclusão: 
 Para conferir se está funcionando, basta digitar -> service nginx start -> tail -f /root/logs/status_online.log 
-Se tudo estiver certo, aparecerá algo parecido com isso: 
-![Descrição da imagem](Compass.Uol-Repo/Sprint-2/Nginx.png)
 
+Se tudo estiver certo, aparecerá algo parecido com isso: 
+
+![Descrição da imagem](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-2/Nginximg.png)
+
+
+Sinal de que está tudo certo! =)
 
