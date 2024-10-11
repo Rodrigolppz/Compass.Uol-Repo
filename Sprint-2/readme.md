@@ -45,7 +45,10 @@ Os outros asteriscos * representam outras unidades de tempo (hora, dia do mês, 
 Essa linha garante que o script /root/nginx.sh seja executado automaticamente a cada 5 minutos, sem a necessidade de intervenção manual.
 #
 
+
 ### Conclusão: 
-Após todos esses passos 
+Para conferir se está funcionando, basta digitar -> service nginx start -> tail -f /root/logs/status_online.log 
+Se tudo estiver certo, aparecerá algo parecido com isso: 
+![Descrição da imagem](Compass.Uol-Repo/Sprint-2/Nginx.png)
 
 
