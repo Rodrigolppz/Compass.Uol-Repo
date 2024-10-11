@@ -54,5 +54,5 @@ Se tudo estiver certo, aparecerá algo parecido com isso:
 ![Descrição da imagem](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-2/Nginximg.png)
 
 
-Sinal de que está tudo certo! =)
+Sinal de que está funcionando, com esse passo a passo o desafio foi concluído com sucesso! =)
 
