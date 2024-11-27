@@ -34,5 +34,10 @@ Nesta sprint, aprendi sobre os fundamentos e conceitos de Docker e containers, a
 #
 
 ###  <a href= Sprint-4 > Sprint 4 - Projeto Docker na AWS  </a>
+Sprint dedicada ao projeto de Docker na AWS, detalhes abaixo: 
+
+<a href=Sprint-4/readme.md>Desafio</a>  
+ 
+
 
 
