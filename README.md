@@ -29,6 +29,7 @@ Sprint dedicada ao primeiro projeto individual, detalhes abaixo:
 ###  <a href= Sprint-3 > Sprint 3 - Docker, Containers, Kubernetes e AWS Cloud  </a>
 Nesta sprint, aprendi sobre os fundamentos e conceitos de Docker e containers, além de trabalhar com a orquestração de containers utilizando Kubernetes e realizando testes na AWS.
 
+<a href=Sprint-3\readme.md> Resumo </a>
 <a href=Sprint-3\Certificados> Certificados </a>
 
 #
