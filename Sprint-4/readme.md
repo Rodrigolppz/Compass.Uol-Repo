@@ -2,9 +2,6 @@
 
 1. [Criação da VPC](#VPC)
 
-[Imagem do Desafio](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-4/Projeto-Docker-AWS.jpg)
-
-
 
 # 1. Criação da VPC
 
