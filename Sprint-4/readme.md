@@ -7,3 +7,8 @@
 
 
 # 1. Criação da VPC
+
+<p>
+  Para começarmos o desafio, precisamos ter uma VPC criada corretamente, essa VPC será o ambiente principal que irá hospedar toda a aplicação e suas dependências de redes.
+  
+</p>
