@@ -23,3 +23,5 @@
 #
 
 ## 2. Criação de uma template EC2
+
+Neste passo, precisamos criar um template para a nossa instância EC2. Esse template nos ajuda bastante na hora de criar um Auto Scaling Group, pois, com o template, não precisamos configurar as mesmas opções toda vez que quisermos iniciar uma nova instância.
