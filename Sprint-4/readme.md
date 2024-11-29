@@ -12,5 +12,14 @@
   Segue abaixo o esquema da VPC criada:
   
   ![Imagem](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-4/imagens/VPC.jpg)
+
+  O que é uma VPC ?
+  
+  Uma VPC (Virtual Private Cloud) é uma rede virtual isolada dentro da AWS, onde você pode definir e controlar os recursos de rede, como sub-redes, roteamento, gateways de internet e regras de firewall. Ela oferece um espaço onde você pode lançar recursos, como instâncias EC2, bancos de dados, e outros serviços de nuvem, em um ambiente seguro e isolado.
+  
   
 </p>
+
+#
+
+## 2. Criação de uma template EC2
