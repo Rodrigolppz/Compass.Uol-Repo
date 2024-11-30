@@ -108,4 +108,9 @@ Para a parte `Configure group size and scaling` que é onde configuramos as capa
 
 O Auto Scaling Group pode ser desativado temporariamente selecionando o mesmo na dashbord dos auto scaling groups, clicando em `Actions -> Edit` e mudando, na aba `Group Size`, os tres valores de `Desired capacity` para zero. Quando se deseja "despausar" o ASG basta fazer o mesmo processo e colocar os valores originais.
 
+# 6. Criação do EFS - Elastic File System
+
+Para armazenar os estáticos do container de aplicação Wordpress utilizei um Elastic File System (EFS) da AWS, que poderá ser acessado por todas as instancias EC2. Seu processo de configuração e montagem nas instancias será feito por meio do script de inicialização user_data.sh.
+
+Mantive todas as opções default na criação deste recurso:
 
