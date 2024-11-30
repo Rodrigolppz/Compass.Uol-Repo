@@ -85,4 +85,16 @@ Segue as configurações do ASG:
 Para a parte `Configure group size and scaling` que é onde configuramos as capacidades de criar e derrubar instancias do Auto Scaling, optei pelas seguintes definições:
 
 
+   - Desired capacity: 2
+   - Min desired capacity: 2
+   - Max desired capacity: 4
+   - Automatic scaling:
+       - Target tracking scaling policy
+       - Metric type: Average CPU utilization
+       - Target value: 40 (Assim que a média de utilização da CPU do grupo alcançar 40%, uma nova instancia será criada)
+       - Instance warmup: 300 seconds
+  - Instance maintenance policy: Mixed behavior / No policy
+
+
+
 
