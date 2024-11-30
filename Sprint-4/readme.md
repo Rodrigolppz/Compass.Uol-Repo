@@ -5,9 +5,12 @@
 Criar uma arquitetura na AWS de acordo com essa [imagem](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-4/imagens/Projeto-Docker-AWS.jpg)
 
 1. [Criação da VPC](#VPC)
+2. [Criação do RDS](#RDS)
 
 
 
+<div id='VPC'/> 
+  
 # 1. Criação da VPC
 
 <p>
@@ -24,6 +27,7 @@ Criar uma arquitetura na AWS de acordo com essa [imagem](https://github.com/Rodr
   
 </p>
 
+<div id='RDS'/>
 
 # 2. Criação do RDS
 
@@ -67,3 +71,18 @@ Neste primeiro momento, criei dois Security Groups:
 # 5. Criação do Auto Scaling Group
 
 O Auto Scaling Group é um serviço da AWS que nos permite gerenciar de forma eficiente as instâncias em execução. Ele ajusta automaticamente a quantidade de instâncias, escalando para mais ou reduzindo sua capacidade, conforme a demanda.
+
+Em `EC2 > Auto Scaling > Auto Scaling Groups > Create Auto Scaling group`
+
+Segue as configurações do ASG:
+
+- Name: AutoScaling-Project
+- Launch Template: RodrigoEC2
+- VPC: wordpress-vpc
+- Avaliability Zones: 1a & 1b
+- Subents: public 1a & public 1b
+
+Para a parte `Configure group size and scaling` que é onde configuramos as capacidades de criar e derrubar instancias do Auto Scaling, optei pelas seguintes definições:
+
+
+
