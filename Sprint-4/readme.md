@@ -108,7 +108,30 @@ Para a parte `Configure group size and scaling` que é onde configuramos as capa
 
 O Auto Scaling Group pode ser desativado temporariamente selecionando o mesmo na dashbord dos auto scaling groups, clicando em `Actions -> Edit` e mudando, na aba `Group Size`, os tres valores de `Desired capacity` para zero. Quando se deseja "despausar" o ASG basta fazer o mesmo processo e colocar os valores originais.
 
-# 6. Criação do EFS - Elastic File System
+# 6. Criação do User_Data
+
+O user_data é uma configuração da EC2 que nos permite adicionar scripts para realizar algumas configurações de forma automática quando iniciamos uma nova máquina, sem ter que fazer tudo manualmente.
+
+Vou separar esse tópico em algumas partes:
+
+### 6.1 Docker
+
+A primeira parte do script é sobre a instalação do docker.
+
+```
+#! /bin/bash
+
+sudo apt install docker.io -y
+
+sudo groupadd docker
+
+sudo usermod -a -G docker ubuntu
+
+docker pull wordpress
+  ```
+
+
+# 7. Criação do EFS - Elastic File System
 
 Para armazenar os estáticos do container de aplicação Wordpress utilizei um Elastic File System (EFS) da AWS, que poderá ser acessado por todas as instancias EC2. Seu processo de configuração e montagem nas instancias será feito por meio do script de inicialização user_data.sh.
 
