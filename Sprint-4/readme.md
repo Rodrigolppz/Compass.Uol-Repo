@@ -21,18 +21,38 @@
 </p>
 
 
+# 2. Criação do RDS
 
-# 2. Criação de um template EC2
+Nesta etapa devemos criar o RDS, que é basicamente o banco de dados da AWS onde vai ficar os dados da nossa aplicação do Wordpress.
+
+- Standard create
+- Engine type: MySQL
+- Engine version: latest
+- Templates: free tier
+- Instance configuration: db.t3.micro (2vCPUs 1GiB RAM)
+- Storage: gp2 com 20GiB alocados
+- Avaliability zone: No preference
+- Database port: 3306 (Default do MySQL)
+
+#
+
+
+# 3. Criação de um template EC2
 
 Neste passo, precisamos criar um template para a nossa instância EC2. Esse template nos ajuda bastante na hora de criar um Auto Scaling Group, pois, com o template, não precisamos configurar as mesmas opções toda vez que quisermos iniciar uma nova instância.
 
-OS: Ubuntu
+- OS: Ubuntu
 
-Instance Type: t2.micro
+- Instance Type: t2.micro
 
-Key pair: my-ec2-key
+- Key pair: my-ec2-key
 
-Security group: wordpress-sg
+- Security group: wordpress-sg
 
 Mais pra frente falaremos sobre User_data.
+
+
+#
+
+
 
