@@ -6,6 +6,9 @@ Criar uma arquitetura na AWS de acordo com essa imagem [Arquitetura AWS](https:/
 
 1. [Criação da VPC](#VPC)
 2. [Criação do RDS](#RDS)
+3. [Template EC2](#EC2)
+4. [Security Groups](#SG)
+5. [Auto Scaling Group](#ASG)
 
 
 
@@ -44,6 +47,8 @@ Nesta etapa devemos criar o RDS, que é basicamente o banco de dados da AWS onde
 
 
 
+<div id='EC2'/>
+
 # 3. Criação de um template EC2
 
 Agora, vamos criar um template EC2, o qual facilita a criação de instâncias dentro de um Auto Scaling Group. Com esse template, não será necessário configurar as opções toda vez que precisarmos lançar uma nova instância.
@@ -59,6 +64,9 @@ Agora, vamos criar um template EC2, o qual facilita a criação de instâncias d
 Mais pra frente falaremos sobre User_data.
 
 
+
+<div id='SG'/>
+
 # 4. Criação dos security groups
 
 Os Security Groups funcionam como um firewall, controlando as permissões de entrada e saída para os serviços aos quais estão vinculados. Eles determinam quais conexões podem ser permitidas ou bloqueadas, garantindo maior segurança na comunicação.
@@ -67,6 +75,9 @@ Neste primeiro momento, criei dois Security Groups:
 
 - Um para as instâncias EC2
 - Outro para o RDS
+
+
+<div id='ASG'/>
 
 # 5. Criação do Auto Scaling Group
 
