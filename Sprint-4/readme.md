@@ -2,7 +2,7 @@
 
 
 ## Desafio:
-Criar uma arquitetura na AWS de acordo com essa [imagem](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-4/imagens/Projeto-Docker-AWS.jpg)
+Criar uma arquitetura na AWS de acordo com essa imagem [Arquitetura AWS](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-4/imagens/Projeto-Docker-AWS.jpg), o projeto consiste em fazer o deploy do wordpress dentro de um container e roda-lo numa EC2 com todas as configurações corretas. Certificando-se de que o container estará conectado com o RDS para que o wordpress funcione e que todas as configurações de redes estejam seguindo as boas práticas.
 
 1. [Criação da VPC](#VPC)
 2. [Criação do RDS](#RDS)
@@ -95,6 +95,6 @@ Para a parte `Configure group size and scaling` que é onde configuramos as capa
        - Instance warmup: 300 seconds
   - Instance maintenance policy: Mixed behavior / No policy
 
-
+O Auto Scaling Group pode ser desativado temporariamente selecionando o mesmo na dashbord dos auto scaling groups, clicando em `Actions -> Edit` e mudando, na aba `Group Size`, os tres valores de `Desired capacity` para zero. Quando se deseja "despausar" o ASG basta fazer o mesmo processo e colocar os valores originais.
 
 
