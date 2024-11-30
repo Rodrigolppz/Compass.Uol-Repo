@@ -42,7 +42,7 @@ Nesta etapa devemos criar o RDS, que é basicamente o banco de dados da AWS onde
 
 # 3. Criação de um template EC2
 
-Neste passo, precisamos criar um template para a nossa instância EC2. Esse template nos ajuda bastante na hora de criar um Auto Scaling Group, pois, com o template, não precisamos configurar as mesmas opções toda vez que quisermos iniciar uma nova instância.
+Agora, vamos criar um template EC2, o qual facilita a criação de instâncias dentro de um Auto Scaling Group. Com esse template, não será necessário configurar as opções toda vez que precisarmos lançar uma nova instância.
 
 - OS: Ubuntu
 
@@ -57,9 +57,12 @@ Mais pra frente falaremos sobre User_data.
 
 # 4. Criação dos security groups
 
-Aqui é onde criamos os security groups, nesse primeiro momento eu criei um security group para as instâncias e outro para o RDS.
+Os Security Groups funcionam como um firewall, controlando as permissões de entrada e saída para os serviços aos quais estão vinculados. Eles determinam quais conexões podem ser permitidas ou bloqueadas, garantindo maior segurança na comunicação.
 
-Os Security Groups funcionam como um firewall, controlando as permissões de entrada e saída para o serviço ao qual estão vinculados. Eles determinam quais conexões podem ser permitidas ou bloqueadas, garantindo maior segurança na comunicação.
+Neste primeiro momento, criei dois Security Groups:
+
+- Um para as instâncias EC2
+- Outro para o RDS
 
 # 5. Criação do Auto Scaling Group
 
