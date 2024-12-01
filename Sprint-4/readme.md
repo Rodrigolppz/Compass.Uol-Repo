@@ -108,6 +108,8 @@ Para a parte `Configure group size and scaling` que é onde configuramos as capa
 
 O Auto Scaling Group pode ser desativado temporariamente selecionando o mesmo na dashbord dos auto scaling groups, clicando em `Actions -> Edit` e mudando, na aba `Group Size`, os tres valores de `Desired capacity` para zero. Quando se deseja "despausar" o ASG basta fazer o mesmo processo e colocar os valores originais.
 
+<div id='USD'/>
+
 # 6. Criação do User_Data
 
 O user_data é uma configuração da EC2 que nos permite adicionar scripts para realizar algumas configurações de forma automática quando iniciamos uma nova máquina, sem ter que fazer tudo manualmente.
@@ -137,3 +139,7 @@ Para armazenar os estáticos do container de aplicação Wordpress utilizei um E
 
 Mantive todas as opções default na criação deste recurso:
 
+- Name: Projeto_Compass
+- VPC: wordpress-vpc
+
+Com o EFS criado basta agora fazermos a montagem dele na nossa máquina, para isso basta clicar em "Attach" dentro do EFS e colar o código que está abaixo de `Using the NFS client`, esse processo é feito no [User_Data](#USD).
