@@ -154,8 +154,31 @@ sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
+### 6.4 Criar e iniciar o arquivo docker-compose.yaml
 
+Nessa parte eu estou criando o arquivo do docker-compose.yaml diretamente dentro da EC2 através do user_data
 
+```
+cat <<EOF | sudo tee /home/ubuntu/docker-compose.yaml
+version: '3.8'
+services: 
+  wordpress:
+    image: wordpress
+    ports:
+      - "8080:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: database-project-compass.cjecaaw0kv3q.us-east-1.rds.amazonaws.com
+      WORDPRESS_DB_USER: rodrigo
+      WORDPRESS_DB_PASSWORD: 123456789
+      WORDPRESS_DB_NAME: Project_Database
+    volumes:
+      - /efs:/var/www/html
+EOF
+
+cd /home/ubuntu
+sudo docker-compose up -d
+```
 
 # 7. Criação do EFS - Elastic File System
 
