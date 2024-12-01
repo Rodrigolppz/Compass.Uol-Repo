@@ -133,6 +133,30 @@ docker pull wordpress
   ```
 
 
+### 6.2 EFS
+
+As linhas abaixo configuram o ambiente para permitir que a instância EC2 se conecte ao EFS (Elastic File System), um sistema de arquivos compartilhado e gerenciado pela AWS. Além disso, configuram a montagem do sistema de arquivos e garantem que ele seja persistido para uso contínuo, mesmo após reinicializações da máquina.
+
+```
+sudo apt-get -y install nfs-common
+
+sudo mkdir /efs
+
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-01fb3b2270d3f4c1a.efs.us-east-1.amazonaws.com:/ /efs
+```
+
+### 6.3 Docker-Compose
+
+Precisamos do docker-compose para rodar a aplicação do wordpress dentro do container e conecta-lo ao RDS.
+
+```
+sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+
+
+
 # 7. Criação do EFS - Elastic File System
 
 Para armazenar os estáticos do container de aplicação Wordpress utilizei um Elastic File System (EFS) da AWS, que poderá ser acessado por todas as instancias EC2. Seu processo de configuração e montagem nas instancias será feito por meio do script de inicialização user_data.sh.
