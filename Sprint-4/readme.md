@@ -108,15 +108,28 @@ Para a parte `Configure group size and scaling` que é onde configuramos as capa
 
 O Auto Scaling Group pode ser desativado temporariamente selecionando o mesmo na dashbord dos auto scaling groups, clicando em `Actions -> Edit` e mudando, na aba `Group Size`, os tres valores de `Desired capacity` para zero. Quando se deseja "despausar" o ASG basta fazer o mesmo processo e colocar os valores originais.
 
+
+# 6. Criação do EFS - Elastic File System
+
+Para armazenar os estáticos do container de aplicação Wordpress utilizei um Elastic File System (EFS) da AWS, que poderá ser acessado por todas as instancias EC2. Seu processo de configuração e montagem nas instancias será feito por meio do script de inicialização user_data.sh.
+
+Mantive todas as opções default na criação deste recurso:
+
+- Name: Projeto_Compass
+- VPC: wordpress-vpc
+
+Com o EFS criado basta agora fazermos a montagem dele na nossa máquina, para isso basta clicar em "Attach" dentro do EFS e colar o código que está abaixo de `Using the NFS client`, esse processo é feito no [User_Data](#USD).
+
+
 <div id='USD'/>
 
-# 6. Criação do User_Data
+# 7. Criação do User_Data
 
 O user_data é uma configuração da EC2 que nos permite adicionar scripts para realizar algumas configurações de forma automática quando iniciamos uma nova máquina, sem ter que fazer tudo manualmente.
 
 Vou separar esse tópico em algumas partes:
 
-### 6.1 Docker
+### 7.1 Docker
 
 A primeira parte do script é sobre a instalação do docker.
 
@@ -133,7 +146,7 @@ docker pull wordpress
   ```
 
 
-### 6.2 EFS
+### 7.2 EFS
 
 As linhas abaixo configuram o ambiente para permitir que a instância EC2 se conecte ao EFS (Elastic File System), um sistema de arquivos compartilhado e gerenciado pela AWS. Além disso, configuram a montagem do sistema de arquivos e garantem que ele seja persistido para uso contínuo, mesmo após reinicializações da máquina.
 
@@ -145,7 +158,7 @@ sudo mkdir /efs
 sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-01fb3b2270d3f4c1a.efs.us-east-1.amazonaws.com:/ /efs
 ```
 
-### 6.3 Docker-Compose
+### 7.3 Docker-Compose
 
 Precisamos do docker-compose para rodar a aplicação do wordpress dentro do container e conecta-lo ao RDS.
 
@@ -154,7 +167,7 @@ sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-### 6.4 Criar e iniciar o arquivo docker-compose.yaml
+### 7.4 Criar e iniciar o arquivo docker-compose.yaml
 
 Nessa parte eu estou criando o arquivo do docker-compose.yaml diretamente dentro da EC2 através do user_data
 
@@ -180,9 +193,9 @@ cd /home/ubuntu
 sudo docker-compose up -d
 ```
 
-### 6.5 Script 
+### 7.5 Script 
 
-O script automatiza a atualização do endereço do site no banco de dados do WordPress sempre que o IP da instância muda. Esse problema surgiu porque o WordPress estava persistindo o IP antigo na tabela wp_options, causando falhas na conexão após o restart ou troca da instância. A solução foi atualizar automaticamente o campo siteurl no banco de dados com o novo IP.
+Esse script automatiza a atualização do endereço do site no banco de dados do WordPress sempre que o IP da instância muda. Esse problema surgiu porque o WordPress estava persistindo o IP antigo na tabela wp_options, causando falhas na conexão após o restart ou troca da instância. A solução foi atualizar automaticamente o campo siteurl no banco de dados com o novo IP.
 
 ```
 IP_EX2="UPDATE wp_options SET option_value = 'http://$(curl http://checkip.amazonaws.com):8080/' WHERE option_name = 'siteurl';"
@@ -191,14 +204,3 @@ sudo apt install mysql-client -y
 host="database-project-compass.cjecaaw0kv3q.us-east-1.rds.amazonaws.com" && user="rodrigo" && pw="123456789"
 mysql -h $host -u $user -p$pw Project_Database -e "$IP_EX2"
 ```
-
-# 7. Criação do EFS - Elastic File System
-
-Para armazenar os estáticos do container de aplicação Wordpress utilizei um Elastic File System (EFS) da AWS, que poderá ser acessado por todas as instancias EC2. Seu processo de configuração e montagem nas instancias será feito por meio do script de inicialização user_data.sh.
-
-Mantive todas as opções default na criação deste recurso:
-
-- Name: Projeto_Compass
-- VPC: wordpress-vpc
-
-Com o EFS criado basta agora fazermos a montagem dele na nossa máquina, para isso basta clicar em "Attach" dentro do EFS e colar o código que está abaixo de `Using the NFS client`, esse processo é feito no [User_Data](#USD).
