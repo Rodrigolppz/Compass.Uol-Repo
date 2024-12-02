@@ -204,3 +204,5 @@ sudo apt install mysql-client -y
 host="database-project-compass.cjecaaw0kv3q.us-east-1.rds.amazonaws.com" && user="rodrigo" && pw="123456789"
 mysql -h $host -u $user -p$pw Project_Database -e "$IP_EX2"
 ```
+
+### 8 Load Balancer
