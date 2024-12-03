@@ -205,4 +205,9 @@ host="database-project-compass.cjecaaw0kv3q.us-east-1.rds.amazonaws.com" && user
 mysql -h $host -u $user -p$pw Project_Database -e "$IP_EX2"
 ```
 
-### 8 Load Balancer
+# 8 Load Balancer
+
+Eu quero criar o Load Balancer para as subnetes 1a e 1b privadas, para isso, eu preciso que essas subnetes tenham acesso a um internet gateway, porém como elas são subnetes privadas, terei que fazer uma configuração para que elas tenham acesso à internet sem que a internet tenha acesso a elas, visando esse cenário estarei utilizando o chamado <b>Bastion Host</b>
+
+### 8.1 Bastion Host
+
