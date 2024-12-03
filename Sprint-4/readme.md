@@ -207,7 +207,8 @@ mysql -h $host -u $user -p$pw Project_Database -e "$IP_EX2"
 
 # 8 Load Balancer
 
-Eu quero criar o Load Balancer para as subnetes 1a e 1b privadas, para isso, eu preciso que essas subnetes tenham acesso a um internet gateway, porém como elas são subnetes privadas, terei que fazer uma configuração para que elas tenham acesso à internet sem que a internet tenha acesso a elas, visando esse cenário estarei utilizando o chamado <b>Bastion Host</b>
+Agora precisamos criar um Load Balancer para as subnets privadas 1a e 1b. Como essas subnets não têm acesso direto à internet, utilizarei um Bastion Host em uma subnet pública. O Bastion Host permitirá que eu acesse as instâncias nas subnets privadas de forma segura para realizar tarefas administrativas.
+Além disso, para possibilitar que as instâncias privadas se comuniquem com a internet (por exemplo, para atualizações ou downloads), configurarei regras específicas de roteamento que utilizem o Bastion Host como intermediário, garantindo que essas subnets continuem inacessíveis diretamente pela internet, mantendo a segurança da infraestrutura.
 
 ### 8.1 Bastion Host
 
