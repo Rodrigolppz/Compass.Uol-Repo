@@ -207,8 +207,32 @@ mysql -h $host -u $user -p$pw Project_Database -e "$IP_EX2"
 
 # 8 Load Balancer
 
-Agora precisamos criar um Load Balancer para as subnets privadas 1a e 1b. Como essas subnets não têm acesso direto à internet, utilizarei um Bastion Host em uma subnet pública. O Bastion Host permitirá que eu acesse as instâncias nas subnets privadas de forma segura para realizar tarefas administrativas.
-Além disso, para possibilitar que as instâncias privadas se comuniquem com a internet (por exemplo, para atualizações ou downloads), configurarei regras específicas de roteamento que utilizem o Bastion Host como intermediário, garantindo que essas subnets continuem inacessíveis diretamente pela internet, mantendo a segurança da infraestrutura.
+Por questões de conflito com o Classical Load balancer, eu optei por seguir o projeto utilizando Application Load Balancer, segue abaixo a configuração:
 
-### 8.1 Bastion Host
+- Scheme: internet-facing (para permitir acessos externos).
+  
+- VPC: A VPC onde as instâncias EC2 e o ALB estão localizados. (wordpress-vpc)
+  
+- Subnets: Aqui selecionei subnets públicas para o ALB (isso permite que o tráfego externo alcance o ALB).
+  
+- Listeners: Configurei o listener para a porta 80 com o protocolo HTTP, que encaminha as requisições para as instâncias EC2 no Target Group.
+  
+- Target Group: O Target Group foi configurado com o protocolo HTTP e a porta 8080, pois a aplicação está rodando na porta 8080 dentro do container.
 
+
+### 8.2 Target Group
+
+Configuração do Target Group:
+
+- Criei um Target Group para as instâncias EC2.
+  
+- Configurei o Target Group para usar o protocolo HTTP na porta 8080.
+  
+- Verifiquei que as instâncias EC2 estavam saudáveis no Target Group.
+
+### 8.3 Bastion Host
+
+Para que eu consiga acessar dentro das instâncias privadas, precisei configurar um Bastion host, que nada mais é do que uma instância pública que servirá como ponte para acessarmos a instância privada.
+
+
+    
