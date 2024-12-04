@@ -234,5 +234,5 @@ Configuração do Target Group:
 
 Para que eu consiga acessar dentro das instâncias privadas, precisei configurar um Bastion host, que nada mais é do que uma instância pública que servirá como ponte para acessarmos a instância privada.
 
-
+![.](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-4/imagens/Bastian%20host%20EC2.jpg)
     
