@@ -239,4 +239,6 @@ Para que eu consiga acessar dentro das instâncias privadas, precisei configurar
 # 9 NAT Gateway
 
 Para que a EC2 privada tenha acesso externo para realizar as instalações necessárias, precisamos configurar um NAT Gateway em uma subnet pública e associa-lo a uma rota privada, fazendo assim com que as instâncias que estejam em determinada subnet privada, consigam ter acesso à internet através do NAT Gateway
-    
+
+
+
