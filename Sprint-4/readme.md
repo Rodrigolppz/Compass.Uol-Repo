@@ -9,6 +9,15 @@ Criar uma arquitetura na AWS de acordo com essa imagem [Arquitetura AWS](https:/
 3. [Template EC2](#EC2)
 4. [Security Groups](#SG)
 5. [Auto Scaling Group](#ASG)
+6. [EFS](#EFS)
+7. [User_Data](#USD)
+8. [Load Balancer e Target group](#8)
+9. [NAT Gateway](#9)
+
+
+   
+
+
 
 
 
