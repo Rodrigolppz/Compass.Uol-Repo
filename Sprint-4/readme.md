@@ -205,6 +205,8 @@ host="database-project-compass.cjecaaw0kv3q.us-east-1.rds.amazonaws.com" && user
 mysql -h $host -u $user -p$pw Project_Database -e "$IP_EX2"
 ```
 
+<div id='8'/> 
+  
 # 8 Load Balancer
 
 Por questões de conflito com o Classical Load balancer, eu optei por seguir o projeto utilizando Application Load Balancer, segue abaixo a configuração:
@@ -236,9 +238,16 @@ Para que eu consiga acessar dentro das instâncias privadas, precisei configurar
 
 ![.](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-4/imagens/Bastian%20host%20EC2.jpg)
 
+<div id='9'/> 
+
 # 9 NAT Gateway
 
 Para que a EC2 privada tenha acesso externo para realizar as instalações necessárias, precisamos configurar um NAT Gateway em uma subnet pública e associa-lo a uma rota privada, fazendo assim com que as instâncias que estejam em determinada subnet privada, consigam ter acesso à internet através do NAT Gateway
 
+|Destination      |Target               
+|----------------|-----------------------
+|0.0.0.0/0       |NAT Gateway                   
+|ID              |nat-091be10202be2d614                   
 
 
+![Nat](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-4/imagens/NAT.jpg)
