@@ -9,7 +9,7 @@ Criar uma arquitetura na AWS de acordo com essa imagem [Arquitetura AWS](https:/
 3. [Template EC2](#EC2)
 4. [Security Groups](#SG)
 5. [Auto Scaling Group](#ASG)
-6. [EFS](#EFS)
+6. [EFS](#6)
 7. [User_Data](#USD)
 8. [Load Balancer e Target group](#8)
 9. [NAT Gateway](#9)
@@ -117,6 +117,7 @@ Para a parte `Configure group size and scaling` que é onde configuramos as capa
 
 O Auto Scaling Group pode ser desativado temporariamente selecionando o mesmo na dashbord dos auto scaling groups, clicando em `Actions -> Edit` e mudando, na aba `Group Size`, os tres valores de `Desired capacity` para zero. Quando se deseja "despausar" o ASG basta fazer o mesmo processo e colocar os valores originais.
 
+<div id='#6'/>
 
 # 6. Criação do EFS - Elastic File System
 
