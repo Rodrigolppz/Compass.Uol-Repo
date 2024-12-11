@@ -261,3 +261,14 @@ Para que a EC2 privada tenha acesso externo para realizar as instalações neces
 
 
 ![Nat](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-4/imagens/NAT.jpg)
+
+# 10 CloudWatch
+
+Utilizaremos a ferramenta da AWS chamada <b>CloudWatch</b> para monitorar a nossa EC2
+
+Passo a passo:
+
+Vá até a instância que deseja monitorar `botão direito em cima dela -> Monitor and Trouleshoot -> Manage CloudWatch Alarms`
+
+[M](
+
