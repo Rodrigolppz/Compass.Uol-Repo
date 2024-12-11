@@ -270,5 +270,5 @@ Passo a passo:
 
 Vá até a instância que deseja monitorar `botão direito em cima dela -> Monitor and Trouleshoot -> Manage CloudWatch Alarms`
 
-[M](
+![M](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-4/imagens/Manage%20%20CloudWatch.jpg)
 
