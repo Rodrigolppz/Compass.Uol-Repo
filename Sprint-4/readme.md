@@ -272,3 +272,18 @@ Vá até a instância que deseja monitorar `botão direito em cima dela -> Monit
 
 ![M](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-4/imagens/Manage%20%20CloudWatch.jpg)
 
+
+Configuração: 
+
+Alarm configuration: ProjectAlarm
+
+Alarm thresholds
+
+Average: Cpu Utilizations
+
+Alarm when >= 50
+
+O restante fica como default.
+
+SNS 
+
