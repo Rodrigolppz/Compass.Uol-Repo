@@ -287,3 +287,11 @@ O restante fica como default.
 
 SNS 
 
+Na aba de Simple Notification Service, defini que o alarme fosse enviado para o meu e-mail quando as especificações fossem atingidas.
+
+Para realizar o teste, utilizei o comando `stress --cpu 9` dentro da instância configurada.
+
+Após alguns minutos de estresse, recebi o seguinte aviso no e-mail:
+
+[Email](
+
