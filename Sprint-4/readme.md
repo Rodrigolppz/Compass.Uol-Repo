@@ -266,14 +266,13 @@ Para que a EC2 privada tenha acesso externo para realizar as instalações neces
 
 Utilizaremos a ferramenta da AWS chamada <b>CloudWatch</b> para monitorar a nossa EC2
 
-Passo a passo:
+### 10.1 Passo a passo
 
 Vá até a instância que deseja monitorar `botão direito em cima dela -> Monitor and Trouleshoot -> Manage CloudWatch Alarms`
 
 ![M](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-4/imagens/Manage%20%20CloudWatch.jpg)
 
-
-Configuração: 
+### 10.2 Configuração: 
 
 Alarm configuration: ProjectAlarm
 
@@ -285,7 +284,7 @@ Alarm when >= 50
 
 O restante fica como default.
 
-SNS 
+### 10.3 Simple Notification Service
 
 Na aba de Simple Notification Service, defini que o alarme fosse enviado para o meu e-mail quando as especificações fossem atingidas.
 
@@ -293,5 +292,5 @@ Para realizar o teste, utilizei o comando `stress --cpu 9` dentro da instância 
 
 Após alguns minutos de estresse, recebi o seguinte aviso no e-mail:
 
-[Email](
+![Email](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-4/imagens/Email%20Alarm.jpg)
 
