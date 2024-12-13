@@ -191,9 +191,9 @@ services:
       - "8080:80"
     restart: always
     environment:
-      WORDPRESS_DB_HOST: database-project-compass.cjecaaw0kv3q.us-east-1.rds.amazonaws.com
-      WORDPRESS_DB_USER: rodrigo
-      WORDPRESS_DB_PASSWORD: 123456789
+      WORDPRESS_DB_HOST: ...
+      WORDPRESS_DB_USER: ...
+      WORDPRESS_DB_PASSWORD: ...
       WORDPRESS_DB_NAME: Project_Database
     volumes:
       - /efs:/var/www/html
@@ -211,7 +211,7 @@ Esse script automatiza a atualização do endereço do site no banco de dados do
 IP_EX2="UPDATE wp_options SET option_value = 'http://$(curl http://checkip.amazonaws.com):8080/' WHERE option_name = 'siteurl';"
 
 sudo apt install mysql-client -y
-host="database-project-compass.cjecaaw0kv3q.us-east-1.rds.amazonaws.com" && user="rodrigo" && pw="123456789"
+host="..." && user="..." && pw="..."
 mysql -h $host -u $user -p$pw Project_Database -e "$IP_EX2"
 ```
 
