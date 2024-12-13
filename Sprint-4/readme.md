@@ -80,10 +80,15 @@ Mais pra frente falaremos sobre User_data.
 
 Os Security Groups funcionam como um firewall, controlando as permissões de entrada e saída para os serviços aos quais estão vinculados. Eles determinam quais conexões podem ser permitidas ou bloqueadas, garantindo maior segurança na comunicação.
 
-Neste primeiro momento, criei dois Security Groups:
+Neste primeiro momento, criei os security groups:
 
-- Um para as instâncias EC2
-- Outro para o RDS
+- ec2-wordpress-private -> para as instancias privadas
+- 
+- RDS_SecurityGroup -> somente para o RDS
+- 
+- EFS-SG -> somente para o EFS
+- 
+- LoadBalancer -> somente para o LoadBalancer
 
 
 <div id='ASG'/>
