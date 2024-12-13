@@ -213,7 +213,7 @@ sudo docker-compose up -d
 Esse script automatiza a atualização do endereço do site no banco de dados do WordPress sempre que o IP da instância muda. Esse problema surgiu porque o WordPress estava persistindo o IP antigo na tabela wp_options, causando falhas na conexão após o restart ou troca da instância. A solução foi atualizar automaticamente o campo siteurl no banco de dados com o novo IP.
 
 ```
-IP_EX2="UPDATE wp_options SET option_value = 'http://$(curl http://checkip.amazonaws.com):8080/' WHERE option_name = 'siteurl';"
+IP_EX2="UPDATE wp_options SET option_value = 'http://ProjectAPP-2006900803.us-east-1.elb.amazonaws.com:8080' WHERE option_name = 'siteurl';"
 
 sudo apt install mysql-client -y
 host="..." && user="..." && pw="..."
