@@ -25,3 +25,7 @@ Migrar esse servidor on-premise para a AWS, a nova arquitetura deve seguir as se
 Antes da migração acontecer para a nova estrutura, precisamos fazer uma
 migração “lift-and-shift” ou “as-is”, o mais rápido possível, só depois que iremos
 promover a modificação para a nova estrutura em Kubernetes.
+
+#
+
+## 1º Etapa - Realizar a migração "lift-and-shift"
