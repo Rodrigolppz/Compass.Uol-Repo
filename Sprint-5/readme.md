@@ -28,4 +28,10 @@ promover a modificação para a nova estrutura em Kubernetes.
 
 #
 
-## 1º Etapa - Realizar a migração "lift-and-shift"
+## 1º Etapa - Realizar a migração lift-and-shift
+
+![.](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-5/Migra%C3%A7%C3%A3o.jpg)
+
+Esta imagem representa a migração lift-and-shift, que consiste em transferir o ambiente anteriormente físico para a nuvem, sem realizar nenhuma alteração na arquitetura ou configuração original.
+
+### Como funciona ? 
