@@ -35,3 +35,19 @@ promover a modificação para a nova estrutura em Kubernetes.
 Esta imagem representa a migração lift-and-shift, que consiste em transferir o ambiente anteriormente físico para a nuvem, sem realizar nenhuma alteração na arquitetura ou configuração original.
 
 ### Como funciona ? 
+
+### 1 - MGN
+
+#### O que é ?
+
+MGN é a abreviação para <b>AWS Application Migration Service</b>, um serviço da AWS utilizado para realizar a migração lift-and-shift de servidores on-premises para a nuvem, sem a necessidade de modificar aplicações, sistema operacional ou configuração.
+
+#### Como o MGN faz isso ? 
+
+O MGN funciona instalando um agente de replicação nas máquinas de origem que você deseja migrar. Esse agente coleta dados continuamente e os replica para volumes no Amazon Elastic Block Store (EBS), vinculados a instâncias EC2 na AWS. A comunicação ocorre de forma segura por meio da porta 1500, que é usada para transferência de dados. Isso permite a sincronização contínua até que você esteja pronto para iniciar as instâncias migradas.
+
+
+### 2 - DMS 
+
+
+
