@@ -70,7 +70,7 @@ Essas transferências serão feitas para a <b>Stagging area</b>, que é uma áre
 
 #
 
-# Serviços e Recursos usados na Arquitetura as-is
+# Serviços e Recursos usados na Arquitetura As-is
 
 - <b>Amazon CloudFront</b>: 
   É um serviço de entrega de conteúdo usado para distribuir conteúdo estático, como imagens e arquivos, de forma eficiente e rápida.
@@ -100,12 +100,13 @@ Essas transferências serão feitas para a <b>Stagging area</b>, que é uma áre
     *Desafio*: Desempenho e escalabilidade insuficientes do banco de dados. 
     *Solução*: BD gerenciado com alta disponibilidade, escalabilidade e backup automático.
 
-- <b>Elastic Load Balancing</b>:
-  O ELB distribui o tráfego entre instâncias do EKS, garantindo um balanceamento de carga eficiente e uma alta disponibilidade da aplicação.
-    *Desafio*: Distribuição desigual de tráfego e baixa disponibilidade.
-    *Solução*: Balanceamento de carga entre instâncias, melhorando a disponibilidade e eficiência do eCommerce.
+- <b>Load Balancer</b>:
+ O Load Balancer distribui automaticamente o tráfego de rede ou de aplicação entre várias instâncias para otimizar o desempenho e aumentar a disponibilidade. Ele monitora a saúde dos recursos e redireciona o tráfego para instâncias saudáveis. Essa estratégia melhora a escalabilidade e evita sobrecargas em um único servidor.
 
-- <b>AWS CloudFormation</b>:
-  O Amazon CloudFormation permite criar e gerenciar sua infraestrutura como código. Use-o para definir e provisionar recursos de maneira automatizada e rastreável.
-    *Desafio*: Gerenciamento manual e complexo da infraestrutura.
-    *Solução*: Automação e rastreabilidade na criação e atualização de recursos de infraestrutura.
+- <b>Elastic Block Store</b>:
+O EBS é um serviço de armazenamento de blocos da AWS usado com instâncias EC2. Ele oferece volumes persistentes para dados, permitindo armazenar arquivos, bancos de dados e aplicações. Os volumes EBS são altamente escaláveis e podem ser configurados para desempenho otimizado ou tolerância a falhas.
+
+- <b>Direct connect</b>:
+
+O AWS Direct Connect é um serviço que estabelece uma conexão privada dedicada entre a rede local de uma empresa e a AWS. Ele oferece maior largura de banda, menor latência e mais segurança em comparação com conexões padrão de internet. Isso facilita a transferência de grandes volumes de dados com estabilidade e desempenho aprimorado.
+
