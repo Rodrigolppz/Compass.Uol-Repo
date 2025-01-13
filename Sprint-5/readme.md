@@ -49,5 +49,11 @@ O MGN funciona instalando um agente de replicação nas máquinas de origem que 
 
 ### 2 - DMS 
 
+#### O que é ? 
 
+DMS é a abreviação de <b>AWS Database Migration Service</b>, um serviço gerenciado da AWS que permite migrar bancos de dados rapidamente e com segurança para a nuvem, mantendo o banco de dados de origem totalmente operacional durante a migração. Ele suporta migração de diversos tipos de bancos de dados, como relacionais, NoSQL e data warehouses.
+
+#### Como funciona ? 
+
+O DMS funciona ao criar uma instância de replicação que conecta o banco de dados de origem e o banco de dados de destino. Ele utiliza endpoints para definir as conexões e é capaz de realizar migrações em três modos principais: Migração de carga completa,  Replicação contínua, Transformação de dados opcional.
 
