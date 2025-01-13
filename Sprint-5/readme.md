@@ -113,6 +113,10 @@ O EBS é um serviço de armazenamento de blocos da AWS usado com instâncias EC2
 
 - <b>Direct connect</b>:  O AWS Direct Connect é um serviço que estabelece uma conexão privada dedicada entre a rede local de uma empresa e a AWS. Ele oferece maior largura de banda, menor latência e mais segurança em comparação com conexões padrão de internet. Isso facilita a transferência de grandes volumes de dados com estabilidade e desempenho aprimorado.
 
+#
+
+# Modernização da Arquitetura
+Nesta etapa é onde faremos a modernização da arquitetura. Uma vez que o servidor on-premise já foi migrado, basta atendermos a próxima solicitação do cliente.
 
 
  
