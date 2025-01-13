@@ -53,7 +53,59 @@ O MGN funciona instalando um agente de replicação nas máquinas de origem que 
 
 DMS é a abreviação de <b>AWS Database Migration Service</b>, um serviço gerenciado da AWS que permite migrar bancos de dados rapidamente e com segurança para a nuvem, mantendo o banco de dados de origem totalmente operacional durante a migração. Ele suporta migração de diversos tipos de bancos de dados, como relacionais, NoSQL e data warehouses.
 
-#### Como funciona ? 
+#### Como o DMS faz isso ? 
 
 O DMS funciona ao criar uma instância de replicação que conecta o banco de dados de origem e o banco de dados de destino. Ele utiliza endpoints para definir as conexões e é capaz de realizar migrações em três modos principais: Migração de carga completa,  Replicação contínua, Transformação de dados opcional.
 
+### 3 - Fluxo de migração
+
+Agora que entendemos o que é o MGN e o DMS e como cada um funciona, vamos à explicação da arquitetura: 
+
+Primeiro precisamos fazer a migração do banco de dados antes de realizar as dos servidores, pois assim quando migrarmos os servidores os endpoints já estarão associados ao RDS ( banco de dados da AWS).
+Utilizaremos o <b>DMS</b> para realizar essa migração, associando um source point e um target point. 
+
+Para realizar a migração do front-end e back-end, iremos utilizar o MGN para instalar o agente em ambos os servidores. O agente será responsável por coletar todos os dados de cada servidor e transferi-los através da porta 1500 para as EC2 na AWS, utilizando o direct connect, tendo em vista que não temos um IP fixo associado às instâncias. 
+
+Essas transferências serão feitas para a <b>Stagging area</b>, que é uma área provisória para testes após a migração, quando tudo estiver pronto e funcionando, iremos  transferir tudo mais uma vez para a área <b>Migrated resources</b>, que é onde nossa arquitetura ficará de fato.
+
+#
+
+# Serviços e Recursos usados na Arquitetura as-is
+
+- <b>Amazon CloudFront</b>: 
+  É um serviço de entrega de conteúdo usado para distribuir conteúdo estático, como imagens e arquivos, de forma eficiente e rápida.
+    *Desafio*: Alto crescimento de acessos e compras. 
+    *Solução*: Distribuição global, eficiente e veloz de conteúdo estático
+  
+- <b>Amazon Route 53</b>:
+  Serviço DNS para registro e gerenciamento de domínios, com roteamento de tráfego para recursos AWS (ELB, CloudFront).
+    *Desafio*: Disponibilidade e resiliência insuficientes. 
+    *Solução*: Roteamento de tráfego eficiente e alta disponibilidade, direcionando acessos para instâncias e serviços AWS.
+
+ - <b>AWS WAF</b>:
+  O AWS Web Application Firewall é um serviço de firewall que ajuda a proteger aplicações web contra ataques comuns.
+    *Desafio*: Proteger o eCommerce.
+    *Solução*: Proteção avançada contra ameaças, garantindo a segurança da aplicação web.
+
+- <b>VPC</b>:
+  A Virtual Private Cloud isolará a infraestrutura na nuvem e fornecerá controle granular sobre a rede, com a criação de uma rede privada virtual, melhorará a segurança e o isolamento.
+    *Desafio*: Isolamento e segurança de rede.
+    *Solução*: Criação de uma rede VPC, trazendo controle de tráfego e segurança aprimorados.
+
+- <b>NAT GATEWAY</b>:
+  O NAT Gateway permite que instâncias em sub-redes privadas na AWS acessem a internet ou outros serviços externos sem expor seus IPs privados diretamente. Ele atua como um intermediário, traduzindo os endereços IP privados para públicos durante o tráfego de saída. Isso melhora a segurança e evita a necessidade de atribuir IPs públicos às instâncias privadas.
+
+- <b>Amazon RDS</b>:
+  O Relational Database Service será usado para hospedar o banco de dados MySQL, garantindo alta disponibilidade, escalabilidade e backup automático dos dados.
+    *Desafio*: Desempenho e escalabilidade insuficientes do banco de dados. 
+    *Solução*: BD gerenciado com alta disponibilidade, escalabilidade e backup automático.
+
+- <b>Elastic Load Balancing</b>:
+  O ELB distribui o tráfego entre instâncias do EKS, garantindo um balanceamento de carga eficiente e uma alta disponibilidade da aplicação.
+    *Desafio*: Distribuição desigual de tráfego e baixa disponibilidade.
+    *Solução*: Balanceamento de carga entre instâncias, melhorando a disponibilidade e eficiência do eCommerce.
+
+- <b>AWS CloudFormation</b>:
+  O Amazon CloudFormation permite criar e gerenciar sua infraestrutura como código. Use-o para definir e provisionar recursos de maneira automatizada e rastreável.
+    *Desafio*: Gerenciamento manual e complexo da infraestrutura.
+    *Solução*: Automação e rastreabilidade na criação e atualização de recursos de infraestrutura.
