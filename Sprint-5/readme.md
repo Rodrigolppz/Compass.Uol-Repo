@@ -106,7 +106,8 @@ Essas transferências serão feitas para a <b>Stagging area</b>, que é uma áre
 - <b>Elastic Block Store</b>:
 O EBS é um serviço de armazenamento de blocos da AWS usado com instâncias EC2. Ele oferece volumes persistentes para dados, permitindo armazenar arquivos, bancos de dados e aplicações. Os volumes EBS são altamente escaláveis e podem ser configurados para desempenho otimizado ou tolerância a falhas.
 
-- <b>Direct connect</b>:
+- <b>Direct connect</b>:  O AWS Direct Connect é um serviço que estabelece uma conexão privada dedicada entre a rede local de uma empresa e a AWS. Ele oferece maior largura de banda, menor latência e mais segurança em comparação com conexões padrão de internet. Isso facilita a transferência de grandes volumes de dados com estabilidade e desempenho aprimorado.
 
-O AWS Direct Connect é um serviço que estabelece uma conexão privada dedicada entre a rede local de uma empresa e a AWS. Ele oferece maior largura de banda, menor latência e mais segurança em comparação com conexões padrão de internet. Isso facilita a transferência de grandes volumes de dados com estabilidade e desempenho aprimorado.
 
+
+ 
