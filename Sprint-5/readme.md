@@ -116,7 +116,9 @@ O EBS é um serviço de armazenamento de blocos da AWS usado com instâncias EC2
 #
 
 # Modernização da Arquitetura
+
+![.](https://github.com/Rodrigolppz/Compass.Uol-Repo/blob/main/Sprint-5/Moderniza%C3%A7%C3%A3o%20EKS.jpg)
+
 Nesta etapa é onde faremos a modernização da arquitetura. Uma vez que o servidor on-premise já foi migrado, basta atendermos a próxima solicitação do cliente.
 
-
- 
+### Como funciona ? 
