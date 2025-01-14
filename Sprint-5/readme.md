@@ -122,3 +122,42 @@ O EBS é um serviço de armazenamento de blocos da AWS usado com instâncias EC2
 Nesta etapa é onde faremos a modernização da arquitetura. Uma vez que o servidor on-premise já foi migrado, basta atendermos a próxima solicitação do cliente.
 
 ### Como funciona ? 
+
+ O processo se inicia com o desenvolvedor escrevendo o código no AWS Cloud9 e enviando para o repositório no GitHub. O Jenkins, configurado para integração contínua, detecta alterações no repositório, constrói a aplicação, gera imagens de contêiner usando Docker e as armazena no Amazon ECR. Essas imagens são implantadas em clusters do EKS organizados em três namespaces: desenvolvimento, homologação/teste e produção. Cada namespace possui node groups separados para gerenciar as camadas de apresentação e aplicação, garantindo isolamento de ambientes e melhor controle de versões. A comunicação e segurança da infraestrutura são implementadas com subnets públicas e privadas dentro de uma VPC. As subnets privadas abrigam os componentes críticos, enquanto as públicas permitem acesso limitado a serviços expostos. O roteamento de tráfego é realizado pelo Amazon Route 53, e a segurança adicional de borda é garantida por AWS CloudFront e AWS WAF. Logs, métricas e alertas são monitorados pelo Amazon CloudWatch, enquanto permissões e acessos são gerenciados pelo AWS IAM e AWS Secrets Manager. O banco de dados é mantido fora do cluster EKS, utilizando o Amazon RDS com réplicas para garantir alta disponibilidade e desempenho. Esta abordagem fornece uma infraestrutura robusta e automatizada para desenvolvimento, teste e produção de aplicações modernas.
+
+ # Serviços e Recursos usados na Arquitetura Moderna (EKS)
+
+  - <b>AWS Cloud9</b>: IDE baseada em nuvem para escrever, rodar e depurar código diretamente no navegador.
+    
+  - <b>GitHub</b>: Repositório de código-fonte usado para versionamento e colaboração.
+    
+  - <b>Jenkins</b>: Ferramenta de integração contínua para automatizar builds, testes e implantações.
+    
+  - <b>Docker</b>: Plataforma para criação e gerenciamento de contêineres.
+    
+  - <b>Amazon ECR</b>: Serviço de registro de contêineres para armazenar imagens Docker.
+
+  - <b>Amazon EKS</b>: Gerencia Kubernetes na AWS para orquestrar contêineres.
+    
+  - <b>Namespaces (EKS)</b>: Isolam ambientes de desenvolvimento, teste e produção dentro do cluster Kubernetes.
+    
+  - <b>Amazon VPC</b>: Rede virtual privada para isolar e proteger recursos de computação.
+    
+  - <b>Subnets (Pública/Privada)</b>: Subnets públicas para acesso externo limitado e subnets privadas para recursos internos.
+    
+  - <b>Amazon Route 53</b>: Serviço de DNS para gerenciar o roteamento de solicitações.
+    
+  - <b>AWS CloudFront</b>: CDN que entrega conteúdo com baixa latência e alta segurança.
+    
+  - <b>AWS WAF</b>: Firewall para proteger aplicações web contra ameaças comuns.
+    
+  - <b>Amazon CloudWatch</b>: Serviço de monitoramento para logs, métricas e alertas.
+    
+  - <b>AWS IAM</b>: Controle de acesso e permissões para os serviços AWS.
+    
+  - <b>AWS Secrets Manager</b>: Gerenciamento seguro de segredos e credenciais.
+    
+  - <b>Amazon RDS</b>: Banco de dados gerenciado para armazenamento persistente.
+    
+  - <b>RDS Replica</b>: Réplicas de leitura para alta disponibilidade e desempenho.
+
